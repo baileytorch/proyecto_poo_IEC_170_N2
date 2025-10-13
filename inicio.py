@@ -1,3 +1,7 @@
-from iu.menu_principal import menu_principal
+from datos.obtener_datos import obtener_datos_comunas, obtener_datos_marcas
 
-menu_principal()
+obtener_datos_marcas()
+
+# from iu.menu_principal import menu_principal
+
+# menu_principal()
