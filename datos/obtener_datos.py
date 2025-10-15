@@ -7,15 +7,7 @@ from sqlalchemy import func
 sesion = Session()
 
 
-def obtener_datos_comunas():
-    listado_comunas = sesion.query(Comuna).all()
-    if listado_comunas:
-        for comuna in listado_comunas:
-            print(f'{comuna.id} {comuna.codigo_comuna} {comuna.nombre_comuna}')
-
-
-def obtener_datos_marcas():
-    listado_marcas = sesion.query(Marca).all()
-    if len(listado_marcas) > 0:
-        for marca in listado_marcas:
-            print(f'{marca.id} {marca.nombre_marca} {marca.pais_origen}')
+def obtener_datos_objetos(objeto):
+    listado_objetos = sesion.query(objeto).all()
+    if listado_objetos:
+        return listado_objetos
