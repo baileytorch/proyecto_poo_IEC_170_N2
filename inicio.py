@@ -1,4 +1,6 @@
-from datos.obtener_datos import obtener_datos_objetos
+from datos.conexion import Session
+from datos.obtener_datos import obtener_datos_objetos, obtener_marca_nombre
+from iu.iu_marcas import ingresar_datos_marca
 from prettytable import PrettyTable
 
 from modelos.comuna import Comuna
@@ -29,8 +31,34 @@ def listado_marcas():
         print(tabla_marcas)
 
 
-listado_marcas()
+sesion = Session()
 
+
+def insertar_marca():
+    marca = input('Ingrese nombre marca: ')
+    pais = input('Ingrese país de origen: ')
+
+    respuesta = obtener_marca_nombre(marca)
+    if respuesta == False:
+        nueva_marca = Marca(nombre_marca=marca, pais_origen=pais)
+
+        sesion.add(nueva_marca)
+        try:
+            sesion.commit()
+            print("El objeto se ha insertado correctamente.")
+        except Exception as e:
+            sesion.rollback()
+            print(f"Error al insertar el objeto: {e}")
+        finally:
+            sesion.close()
+    else:
+        print('Su marca YA existe en base de datos.')
+
+
+insertar_marca()
+
+# listado_comunas()
+# listado_marcas()
 
 # from iu.menu_principal import menu_principal
 
