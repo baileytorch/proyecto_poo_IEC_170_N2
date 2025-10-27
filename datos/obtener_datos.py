@@ -1,9 +1,6 @@
-from datos.conexion import Session
+from datos.conexion import sesion
 from modelos.marca import Marca
 from auxiliares.normalizar_cadena import normalizar_cadena
-
-
-sesion = Session()
 
 
 def obtener_datos_objetos(objeto):
@@ -14,9 +11,10 @@ def obtener_datos_objetos(objeto):
 
 def obtener_marca_nombre(nombre_marca):
     listado_marcas = obtener_datos_objetos(Marca)
-    marca_encontrada = False
+    marca_encontrada = None
     if listado_marcas:
         for marca in listado_marcas:
             if normalizar_cadena(marca.nombre_marca) == normalizar_cadena(nombre_marca):
-                marca_encontrada = True
+                marca_encontrada = marca
+                break
     return marca_encontrada
