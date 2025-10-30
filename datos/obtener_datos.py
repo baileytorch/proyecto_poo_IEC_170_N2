@@ -4,7 +4,7 @@ from auxiliares.normalizar_cadena import normalizar_cadena
 
 
 def obtener_datos_objetos(objeto):
-    listado_objetos = sesion.query(objeto).all()
+    listado_objetos = sesion.query(objeto).filter_by(habilitado=True).all()
     if len(listado_objetos) > 0:
         return listado_objetos
 

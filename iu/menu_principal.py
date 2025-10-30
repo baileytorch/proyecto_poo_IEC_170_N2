@@ -1,5 +1,4 @@
-from auxiliares.info_aplicaion import nombre_aplicacion
-from auxiliares.version import numero_version
+from auxiliares import nombre_aplicacion, numero_version
 
 
 def menu_principal():

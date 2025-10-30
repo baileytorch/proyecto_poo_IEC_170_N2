@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String,Boolean
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -10,3 +10,4 @@ class Marca(Base):
     id = Column(Integer, primary_key=True)
     nombre_marca = Column(String(25), nullable=False)
     pais_origen = Column(String(50), nullable=True)
+    habilitado = Column(Boolean, nullable=False)
