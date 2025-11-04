@@ -1,0 +1,3 @@
+ALTER TABLE marcas DROP COLUMN pais_origen;
+
+ALTER TABLE paises ADD COLUMN habilitado TINYINT DEFAULT 1 NOT NULL;
