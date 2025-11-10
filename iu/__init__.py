@@ -1,2 +1,3 @@
-from .menu_principal import menu_principal
+from .menus_sistema import menu_principal
 from .iu_marcas import ingresar_nombre_marca, ingresar_pais_origen, ingresar_nuevo_nombre_marca
+from .iu_comunas import ingresar_nombre_comuna,ingresar_codigo_comuna

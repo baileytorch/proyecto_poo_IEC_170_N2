@@ -1,4 +1,4 @@
-nombre_aplicacion = 'Sistema de Gestión de Empleados'
+nombre_aplicacion = 'Sistema de Gestión de Taller - MecAPP'
 usuario_db = 'root'
 servidor_db = 'localhost'
 puerto_db = 3306

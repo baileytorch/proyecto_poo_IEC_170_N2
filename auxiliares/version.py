@@ -19,5 +19,7 @@ PATCH: Se incrementa cuando se corrigen errores o se hacen
 #   29.09.2025  : Inicio del proyecto (v1.0.0)
 #   20.10.2025  : Iserción datos de marca (v1.1.0)
 #   27.10.2025  : Modificación datos de marca (v1.2.0)
+#   27.10.2025  : Eliminar datos de marca (v1.3.0)
+#   27.10.2025  : Creación métodos de gestión de comunas (v1.4.0)
 
-numero_version = '1.2.0'
+numero_version = '1.4.0'

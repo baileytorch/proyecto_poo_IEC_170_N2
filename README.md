@@ -96,6 +96,9 @@ Para implementar el proyecto de Programación Orientada a Objetos en Python, se 
   <li><b>requests</b> → Para consumir servicios web o APIs REST.
     <pre><code>pip install requests</code></pre>
   </li>
+  <li><b>rut-chile</b> → Para validar RUT's chilenos.
+    <pre><code>pip install rut-chile</code></pre>
+  </li>
 </ul>
 
 <h3>🔹 Pruebas y depuración</h3>
@@ -125,6 +128,7 @@ python-dateutil
 pandas
 requests
 pytest
+rut-chile
 </code></pre>
 
 <p>
